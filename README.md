@@ -3,12 +3,12 @@
 
 A simple and efficient To-Do List web application built using Angular (frontend) and Node.js/Express with MongoDB (backend). Users can add, view, edit, and delete their tasks with data persisted to a MongoDB database.
 
-🌐 Live Stack Overview
+🌐 Live Stack Overview:
 Layer	Technology
 Frontend	Angular, Bootstrap, Axios
 Backend	Node.js, Express.js
 Database	MongoDB (via Mongoose)
-📦 Features
+📦 Features:
 
 ✅ Add tasks
 
@@ -24,7 +24,7 @@ Database	MongoDB (via Mongoose)
 
 🔁 Dynamic routing & data binding with Angular
 
-🗂️ Project Structure
+🗂️ Project Structure:
 /ToDoListApp
 ├── frontend/               # Angular App
 │   ├── src/
@@ -44,7 +44,7 @@ Database	MongoDB (via Mongoose)
 │   └── package.json
 
 ⚙️ Getting Started
-Prerequisites
+Prerequisites:
 
 Node.js (v14+ recommended)
 
@@ -52,7 +52,7 @@ Angular CLI (npm install -g @angular/cli)
 
 MongoDB Atlas or local MongoDB
 
-🧩 Backend Setup (Node.js + MongoDB)
+🧩 Backend Setup (Node.js + MongoDB):
 1. Navigate to the backend folder:
 cd backend
 
@@ -66,7 +66,7 @@ node index.js
 ✅ Server will start at http://localhost:5000
 ✅ Connected to MongoDB Atlas (update URI if needed in index.js)
 
-🧩 Frontend Setup (Angular)
+🧩 Frontend Setup (Angular):
 1. Navigate to the frontend folder:
 cd frontend
 
@@ -80,7 +80,7 @@ ng serve
 ✅ Frontend will run at http://localhost:4200
 
 🔗 API Endpoints (Backend)
-Method	Endpoint	Description
+Method	Endpoint	Description:
 GET	/tasks	Fetch all tasks
 POST	/add-task	Add a new task
 POST	/edit	Get task by ID (for edit)
