@@ -1,6 +1,8 @@
 //initialize express
 //initialize app
 //define port
+require('dotenv').config(); // ← Load .env variables
+
 let cors = require('cors')
 let express = require('express');
 let app = express();
@@ -13,13 +15,16 @@ let Task= require("./model");
 //-----------------------------------------------------------------------------------
 
 app.use( express.json());
-const url="mongodb+srv://aashminj:aash4321@cluster0.u7vbo1j.mongodb.net/ToDoList?retryWrites=true&w=majority&appName=Cluster0";
 app.use(cors());
+
+// Use hidden MongoDB URL
+const url = process.env.MONGODB_URI;
+
 //connect to database
 mongoose
-.connect(url)
-.then(res=>console.log('db connected'))
-.catch(error=> console.log(error));
+  .connect(url)
+  .then(res => console.log('db connected'))
+  .catch(error => console.log(error));
 //routes
 //
 app.get('/',(req,res)=>{
