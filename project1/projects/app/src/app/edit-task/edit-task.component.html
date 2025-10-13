@@ -1,0 +1,13 @@
+<div class="mt-2 mb-2">
+    <div class="input-group" >
+        <span class="input-group-text ms-2 border-success border-3 ">Edit Task</span>
+        <input  class="flex-grow-1 border-info me-3"   [(ngModel)]="editTask.Work" name="data" placeholder="write your task here" />
+    </div> 
+    <div class="ms-3 text-break pe-3">{{editTask.Work}}</div>
+    
+    <div class=" position-absolute mt-4 pe-3  start-50 ">
+        <button class="btn btn-warning   border border-2 "  (click)="updateTaskHandler()"> Update Task</button>
+    </div>
+    
+</div>
+    

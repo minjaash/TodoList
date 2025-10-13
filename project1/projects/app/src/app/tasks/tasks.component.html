@@ -1,0 +1,29 @@
+<div  class="border-2 border border-light ps-3" [hidden]="showDelete" >
+   <app-delete-task (showDeleteEmitter)="showDeleteListener($event)"[deleteTask]="deleteTask" [hidden]="showDelete"  ></app-delete-task>
+     
+</div>
+
+<div class="list-group m-3 border  border-4 " [hidden]="showTasks" >
+   <div *ngFor="let task of storedTasks;index as idx" class=""   style="background-color: rgba(19, 160, 144, 0.8)" >
+      <div class="d-flex w-100 justify-content-between border border-primary border-2">
+         <h5  class=" m-3  border-end-2">{{idx+1}}  </h5>
+         <p class=" pt-3 text-break w-50 " >{{task.Work}}</p>
+         <div class="d-grid gap-2 d-md-block m-1">
+            <button class="btn btn-info m-2" type="button" (click)="editTaskHandler(task._id)">edit</button>
+            <button class="btn btn-danger m-2" type="button"(click)="deleteTaskHandler(task)">delete</button>
+         </div>
+      </div>
+      
+   </div>
+   
+</div>
+  <!-- For refreshing Stored Tasks -->
+
+ <!-- <div  class="border-2 border border-light ps-3" [hidden]="showDelete"  >
+   <app-delete-task></app-delete-task>
+   <router-outlet ></router-outlet> 
+</div> -->
+   
+    
+     
+      
