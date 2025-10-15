@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, EventEmitter,  Input,  OnChanges,  OnInit, Output, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import axios from 'axios';
-
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-delete-task',
   templateUrl: './delete-task.component.html',
@@ -11,7 +11,7 @@ import axios from 'axios';
 export class DeleteTaskComponent implements OnInit,OnChanges {
   taskToDelete:any
   showDeleteComp:boolean=true
-  url="http://localhost:5000/";
+  url=environment.apiUrl;
   @Output('showDeleteEmitter')showDeleteEmitter:EventEmitter <any>=new EventEmitter();
   @Input()deleteTask:any
  

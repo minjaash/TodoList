@@ -1,6 +1,7 @@
 import { Component,  OnChanges,  OnInit, SimpleChanges } from '@angular/core';
 import axios from 'axios';
 import { Router} from '@angular/router';
+import { environment } from '../../environments/environment';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class TasksComponent implements OnInit {
   leftTasks:any=[];
   //for Looping
   storedLeftTasks:any=[]
-  url="http://localhost:5000/";
+  url=environment.apiUrl;
   editTask: any={};
   deleteTask:any;
   

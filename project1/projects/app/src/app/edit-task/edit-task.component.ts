@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import axios from 'axios';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-edit-task',
@@ -9,7 +10,7 @@ import axios from 'axios';
 })
 export class EditTaskComponent implements OnInit {
   editTask:any={}
-  url="http://localhost:5000/";
+  url=environment.apiUrl;
   constructor(private ar:ActivatedRoute){
 
   }
