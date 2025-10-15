@@ -1,13 +1,7 @@
-<div class="mt-2">
-    <div class="input-group" >
-        <span class="input-group-text ms-2 border-success border-3 ">Enter Task</span>
-        <input  class="flex-grow-1 border-info me-3"   [(ngModel)]="task.Work" name="data" placeholder="write your task here" />
-    </div> 
-    <div class="text-break ms-3">{{task.Work}}</div>
-    
-    <div class=" position-absolute mt-4 pe-3  start-50 ">
-        <button class="btn btn-success   border border-2 "  (click)="addTaskHandler()"> Add Task</button>
-    </div>
-    
+<div class="mt-4 "> 
+    <div class="input-group" > 
+        <span class="input-group-text ms-2 border-success border-3 ">Enter Task</span> 
+        <input class="flex-grow-1 border-info me-3" [(ngModel)]="task.Work" name="data" placeholder="write your task here" /> </div> <div class="text-break ms-3">{{task.Work}}</div> <div class=" position-absolute mt-4 pe-3 start-50 ">
+             <button class="btn btn-success border border-2 " (click)="addTaskHandler()"> Add Task</button> 
+     </div> 
 </div>
-    
