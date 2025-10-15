@@ -6,8 +6,8 @@ require('dotenv').config(); // ← Load .env variables
 let cors = require('cors')
 let express = require('express');
 let app = express();
-let port=5000;
-let host="localhost";
+const PORT = process.env.PORT || 3000;;
+
 const mongoose=require("mongoose");
 
 //-----------------------------------------------------------------------------------
@@ -88,11 +88,7 @@ app.delete("/delete",(req,res)=>{
     .catch(err=>console.log(err))
 })
 //start listening to port from server
-app.listen(port,host,(error)=>{
-    if (error){
-        console.log("problem-",error);
-    }
-    else{
-        console.log("server is running in port ",port)
-    }
+console.log("no problem ")
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server listening on port ${PORT}`)
 })
